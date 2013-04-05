@@ -23,6 +23,7 @@
 		DE1048DF170F713E002F7BCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1048BA170F713E002F7BCB /* Foundation.framework */; };
 		DE1048E7170F713E002F7BCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE1048E5170F713E002F7BCB /* InfoPlist.strings */; };
 		DE1048EA170F713E002F7BCB /* NamesListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1048E9170F713E002F7BCB /* NamesListTests.m */; };
+		DE1048F5170F7305002F7BCB /* BSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1048F4170F7305002F7BCB /* BSTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		DE1048E6170F713E002F7BCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE1048E8170F713E002F7BCB /* NamesListTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NamesListTests.h; sourceTree = "<group>"; };
 		DE1048E9170F713E002F7BCB /* NamesListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NamesListTests.m; sourceTree = "<group>"; };
+		DE1048F3170F7305002F7BCB /* BSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTableViewController.h; sourceTree = "<group>"; };
+		DE1048F4170F7305002F7BCB /* BSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				DE1048D3170F713E002F7BCB /* BSViewController.h */,
 				DE1048D4170F713E002F7BCB /* BSViewController.m */,
 				DE1048BF170F713E002F7BCB /* Supporting Files */,
+				DE1048F3170F7305002F7BCB /* BSTableViewController.h */,
+				DE1048F4170F7305002F7BCB /* BSTableViewController.m */,
 			);
 			path = NamesList;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				DE1048C5170F713E002F7BCB /* main.m in Sources */,
 				DE1048C9170F713E002F7BCB /* BSAppDelegate.m in Sources */,
 				DE1048D5170F713E002F7BCB /* BSViewController.m in Sources */,
+				DE1048F5170F7305002F7BCB /* BSTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +460,7 @@
 				DE1048EF170F713E002F7BCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE1048F0170F713E002F7BCB /* Build configuration list for PBXNativeTarget "NamesListTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +469,7 @@
 				DE1048F2170F713E002F7BCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
