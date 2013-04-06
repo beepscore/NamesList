@@ -25,6 +25,8 @@
 		DE1048E7170F713E002F7BCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE1048E5170F713E002F7BCB /* InfoPlist.strings */; };
 		DE1048EA170F713E002F7BCB /* NamesListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1048E9170F713E002F7BCB /* NamesListTests.m */; };
 		DE1048F5170F7305002F7BCB /* BSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1048F4170F7305002F7BCB /* BSTableViewController.m */; };
+		DE341C77170FCE7600D01E59 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DE341C76170FCE7600D01E59 /* README.md */; };
+		DE341C79170FD09500D01E59 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE341C78170FD09500D01E59 /* LICENSE.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		DE1048E9170F713E002F7BCB /* NamesListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NamesListTests.m; sourceTree = "<group>"; };
 		DE1048F3170F7305002F7BCB /* BSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTableViewController.h; sourceTree = "<group>"; };
 		DE1048F4170F7305002F7BCB /* BSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTableViewController.m; sourceTree = "<group>"; };
+		DE341C76170FCE7600D01E59 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		DE341C78170FD09500D01E59 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 		DE1048AC170F713E002F7BCB = {
 			isa = PBXGroup;
 			children = (
+				DE341C76170FCE7600D01E59 /* README.md */,
+				DE341C78170FD09500D01E59 /* LICENSE.txt */,
 				DE1048BE170F713E002F7BCB /* NamesList */,
 				DE1048E2170F713E002F7BCB /* NamesListTests */,
 				DE1048B7170F713E002F7BCB /* Frameworks */,
@@ -247,6 +253,8 @@
 				DE1048CD170F713E002F7BCB /* Default@2x.png in Resources */,
 				DE1048CF170F713E002F7BCB /* Default-568h@2x.png in Resources */,
 				DE1048D2170F713E002F7BCB /* MainStoryboard.storyboard in Resources */,
+				DE341C77170FCE7600D01E59 /* README.md in Resources */,
+				DE341C79170FD09500D01E59 /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
