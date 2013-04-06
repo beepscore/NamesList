@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BSPeople.h"
 
 @interface BSAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) BSPeople *people;
 
 @end
