@@ -7,9 +7,11 @@
 //
 
 #import "BSTableViewController.h"
+#import "BSAppDelegate.h"
 
 @interface BSTableViewController ()
-
+@property (weak) BSAppDelegate *bsAppDelegate;
+@property NSMutableArray *names;
 @end
 
 @implementation BSTableViewController
@@ -26,7 +28,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    self.bsAppDelegate = (BSAppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.names = self.bsAppDelegate.people.names;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -60,6 +65,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    cell.textLabel.text = self.names[indexPath.row];
     
     return cell;
 }
@@ -69,13 +75,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    // Storyboard segue creates and pushes another view controller, so don't need to do that here.
+    
+    // set model currentNameIndex for use by BSViewController
+    self.bsAppDelegate.people.currentNameIndex = indexPath.row;
 }
 
 @end
