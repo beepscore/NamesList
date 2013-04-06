@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE04D202170F8BBF0039E6CC /* BSPeople.m in Sources */ = {isa = PBXBuildFile; fileRef = DE04D201170F8BBF0039E6CC /* BSPeople.m */; };
 		DE1048B9170F713E002F7BCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1048B8170F713E002F7BCB /* UIKit.framework */; };
 		DE1048BB170F713E002F7BCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1048BA170F713E002F7BCB /* Foundation.framework */; };
 		DE1048BD170F713E002F7BCB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1048BC170F713E002F7BCB /* CoreGraphics.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE04D200170F8BBF0039E6CC /* BSPeople.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPeople.h; sourceTree = "<group>"; };
+		DE04D201170F8BBF0039E6CC /* BSPeople.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPeople.m; sourceTree = "<group>"; };
 		DE1048B5170F713E002F7BCB /* NamesList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NamesList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1048B8170F713E002F7BCB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE1048BA170F713E002F7BCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -128,6 +131,8 @@
 				DE1048BF170F713E002F7BCB /* Supporting Files */,
 				DE1048F3170F7305002F7BCB /* BSTableViewController.h */,
 				DE1048F4170F7305002F7BCB /* BSTableViewController.m */,
+				DE04D200170F8BBF0039E6CC /* BSPeople.h */,
+				DE04D201170F8BBF0039E6CC /* BSPeople.m */,
 			);
 			path = NamesList;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				DE1048C9170F713E002F7BCB /* BSAppDelegate.m in Sources */,
 				DE1048D5170F713E002F7BCB /* BSViewController.m in Sources */,
 				DE1048F5170F7305002F7BCB /* BSTableViewController.m in Sources */,
+				DE04D202170F8BBF0039E6CC /* BSPeople.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
