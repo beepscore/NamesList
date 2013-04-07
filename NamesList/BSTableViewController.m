@@ -8,10 +8,12 @@
 
 #import "BSTableViewController.h"
 #import "BSAppDelegate.h"
+#import "BSViewController.h"
 
 @interface BSTableViewController ()
 @property (weak) BSAppDelegate *bsAppDelegate;
-@property NSMutableArray *names;
+@property (strong) NSMutableArray *names;
+@property (assign) NSUInteger currentNameIndex;
 @end
 
 @implementation BSTableViewController
@@ -82,9 +84,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Storyboard segue creates and pushes another view controller, so don't need to do that here.
-    
+    self.currentNameIndex = indexPath.row;
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // set model currentNameIndex for use by BSViewController
-    self.bsAppDelegate.people.currentNameIndex = indexPath.row;
+    if ([segue.identifier isEqualToString:@"editName"]) {
+        BSViewController *bsViewController = (BSViewController*)segue.destinationViewController;
+        bsViewController.currentNameIndex = self.currentNameIndex;
+    }
+    
 }
 
 @end

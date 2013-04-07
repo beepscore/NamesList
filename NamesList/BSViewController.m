@@ -41,7 +41,7 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField {
 
     BSAppDelegate *bsAppDelegate = (BSAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [bsAppDelegate.people.names replaceObjectAtIndex:bsAppDelegate.people.currentNameIndex
+    [bsAppDelegate.people.names replaceObjectAtIndex:self.currentNameIndex
                                           withObject:textField.text];
 }
 
@@ -50,6 +50,5 @@
     [sender resignFirstResponder];
     
 }
-
 
 @end

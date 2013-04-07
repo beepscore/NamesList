@@ -14,8 +14,7 @@
     self = [super init];
     if (self) {
         // Initialize self.
-        self.names = [NSMutableArray arrayWithArray:@[@"Bob", @"Zebra", @"Joe", @"Colin",  @"a", @"b", @"c", @"d",@"e",@"f"]];
-        self.currentNameIndex = 0;
+        self.names = [NSMutableArray arrayWithArray:@[@"Bob", @"Zebra", @"Joe", @"Collin", @"a", @"b", @"c", @"d", @"e", @"f"]];
     }
     return self;
 }

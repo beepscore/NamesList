@@ -11,6 +11,5 @@
 @interface BSPeople : NSObject
 
 @property (strong) NSMutableArray *names;
-@property (assign) NSUInteger currentNameIndex;
 
 @end
