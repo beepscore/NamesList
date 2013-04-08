@@ -56,6 +56,11 @@
 }
 
 
+- (IBAction)backgroundTapped:(id)sender {
+    [self.nameField endEditing:YES];
+}
+
+
 - (IBAction)save:(id)sender {
     BSAppDelegate *bsAppDelegate = (BSAppDelegate *)[[UIApplication sharedApplication] delegate];
     [bsAppDelegate.people.names replaceObjectAtIndex:self.currentNameIndex

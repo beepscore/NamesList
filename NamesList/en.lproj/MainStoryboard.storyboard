@@ -52,6 +52,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbI-RI-Q0l">
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -79,6 +80,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="yM1-ln-Eyf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="BS6-Ca-aPr"/>
                             <constraint firstItem="yM1-ln-Eyf" firstAttribute="top" secondItem="XC8-bc-mQv" secondAttribute="top" constant="134" id="I1X-W5-FuB"/>
@@ -88,6 +90,9 @@
                             <constraint firstItem="sbI-RI-Q0l" firstAttribute="top" secondItem="XC8-bc-mQv" secondAttribute="top" constant="20" symbolic="YES" type="default" id="pig-jm-WIT"/>
                             <constraint firstItem="sbI-RI-Q0l" firstAttribute="leading" secondItem="XC8-bc-mQv" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sKc-S1-GvT"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="yQ3-Fh-cxY" appends="YES" id="KwL-tZ-gU8"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="dFe-TX-K5M"/>
                     <connections>
@@ -96,6 +101,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3e-In-8s8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="yQ3-Fh-cxY">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="UhV-p1-okk" id="r8M-qn-QYA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="563" y="36"/>
         </scene>
@@ -107,6 +117,7 @@
         <class className="BSViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BSViewController.h"/>
             <relationships>
+                <relationship kind="action" name="backgroundTapped:"/>
                 <relationship kind="action" name="cancel:"/>
                 <relationship kind="action" name="save:"/>
                 <relationship kind="action" name="textFieldReturn:"/>
