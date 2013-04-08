@@ -37,6 +37,12 @@
 }
 
 
+- (void)dealloc {
+    // the object is going away, so nil any delegate references to it.
+    self.nameField.delegate = nil;
+}
+
+
 #pragma mark - TextFieldDelegate methods
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
