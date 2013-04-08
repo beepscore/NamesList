@@ -12,8 +12,8 @@
 
 @interface BSTableViewController ()
 @property (weak) BSAppDelegate *bsAppDelegate;
+@property (weak) BSViewController *bsViewController;
 @property (strong) NSMutableArray *names;
-@property (assign) NSUInteger currentNameIndex;
 @end
 
 @implementation BSTableViewController
@@ -84,17 +84,21 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Storyboard segue creates and pushes another view controller, so don't need to do that here.
-    self.currentNameIndex = indexPath.row;
+    // tableView:didSelectRowAtIndexPath: is called after prepareForSegue:sender:
 }
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // set model currentNameIndex for use by BSViewController
-    if ([segue.identifier isEqualToString:@"editName"]) {
-        BSViewController *bsViewController = (BSViewController*)segue.destinationViewController;
-        bsViewController.currentNameIndex = self.currentNameIndex;
-    }
     
+    if ([segue.identifier isEqualToString:@"editName"]) {
+        
+        self.bsViewController = (BSViewController*)segue.destinationViewController;
+        
+        // get selectedRow. sender cell contains text but not table view row number.
+        NSUInteger selectedRow = [[self.tableView indexPathForSelectedRow] row];
+        self.bsViewController.currentNameIndex = selectedRow;
+        self.bsViewController.currentName = self.names[selectedRow];
+    }
 }
 
 @end

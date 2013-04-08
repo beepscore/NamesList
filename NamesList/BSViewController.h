@@ -10,4 +10,5 @@
 
 @interface BSViewController : UIViewController <UITextFieldDelegate>
 @property (assign) NSUInteger currentNameIndex;
+@property (strong) NSString *currentName;
 @end

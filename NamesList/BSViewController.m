@@ -11,7 +11,9 @@
 
 @interface BSViewController ()
 @property (weak) IBOutlet UITextField *nameField;
-    @end
+@property (weak) IBOutlet UIButton *cancelButton;
+@property (weak) IBOutlet UIButton *saveButton;
+@end
 
 @implementation BSViewController
 
@@ -22,6 +24,12 @@
     self.nameField.delegate = self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.saveButton.hidden = YES;
+    self.nameField.text = self.currentName;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -29,26 +37,30 @@
 }
 
 
-- (IBAction)done:(id)sender {
-    NSLog(@"done tapped");
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
-
-
 #pragma mark - TextFieldDelegate methods
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-
-    BSAppDelegate *bsAppDelegate = (BSAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [bsAppDelegate.people.names replaceObjectAtIndex:self.currentNameIndex
-                                          withObject:textField.text];
+    self.saveButton.hidden = NO;
+    self.currentName = self.nameField.text;
 }
 
+# pragma mark - IBActions
 
 - (IBAction)textFieldReturn:(id)sender {
     [sender resignFirstResponder];
-    
+}
+
+
+- (IBAction)save:(id)sender {
+    BSAppDelegate *bsAppDelegate = (BSAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [bsAppDelegate.people.names replaceObjectAtIndex:self.currentNameIndex
+                                          withObject:self.currentName];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (IBAction)cancel:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
