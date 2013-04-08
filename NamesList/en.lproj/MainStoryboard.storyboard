@@ -91,7 +91,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="dFe-TX-K5M"/>
                     <connections>
-                        <outlet property="cancelButton" destination="0c2-FI-SQf" id="W6o-qq-CBB"/>
                         <outlet property="nameField" destination="yM1-ln-Eyf" id="nFX-dC-8vM"/>
                         <outlet property="saveButton" destination="sbI-RI-Q0l" id="3F3-1f-o84"/>
                     </connections>
@@ -111,7 +110,6 @@
                 <relationship kind="action" name="cancel:"/>
                 <relationship kind="action" name="save:"/>
                 <relationship kind="action" name="textFieldReturn:"/>
-                <relationship kind="outlet" name="cancelButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="saveButton" candidateClass="UIButton"/>
             </relationships>

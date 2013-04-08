@@ -11,7 +11,6 @@
 
 @interface BSViewController ()
 @property (weak) IBOutlet UITextField *nameField;
-@property (weak) IBOutlet UIButton *cancelButton;
 @property (weak) IBOutlet UIButton *saveButton;
 @end
 
